@@ -23,9 +23,9 @@ def main():
 
     # Подключение к Geth
     w3 = Web3(Web3.HTTPProvider(args.provider))
-    if not w3.isConnected():
+    if not w3.is_connected():
         print("Не удалось подключиться к Geth.")
-        sys.exit(1) 
+        sys.exit(1)
 
     # Минимальная часть ABI для функции balanceOf
     token_abi = json.loads(
